@@ -1,1 +1,2 @@
-# book_fastapi_web_dev
+# 저장소 설명
+`FastAPI를 이용한 파이썬 웹 개발` 책 실습 코드 저장소
