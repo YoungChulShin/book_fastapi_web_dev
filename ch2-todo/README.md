@@ -73,3 +73,18 @@ endpoint
 @todo_router.get("/todo", response_model=TodoItems)
 async def retrieve_todos() -> dict: 
 ```
+
+## 에러 발생 및 응답
+fastapi가 제공하는 `HTTPException`을 사용한다. 
+
+```python
+# library 추가
+from fastapi import HTTPException, status
+
+# 에러 발생 메서드 추가
+async def raise_not_found_exception():
+    raise HTTPException(
+        status_code=status.HTTP_404_NOT_FOUND,
+        detail="Todo with supplied ID doesn't exist.",
+    )
+```
