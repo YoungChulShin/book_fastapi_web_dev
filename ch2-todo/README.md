@@ -66,4 +66,10 @@ endpoint
 - Swagger: /docs
 - ReDoc: /redoc
 
+## 응답 모델 사용
+모델을 생성하고, router에 연결해준다. 
 
+```python
+@todo_router.get("/todo", response_model=TodoItems)
+async def retrieve_todos() -> dict: 
+```
